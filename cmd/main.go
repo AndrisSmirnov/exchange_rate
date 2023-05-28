@@ -4,7 +4,6 @@ import (
 	"context"
 	"exchange_rate/pkg"
 	"exchange_rate/pkg/controllers"
-	"exchange_rate/pkg/domain"
 	"exchange_rate/pkg/infrastructure/currency"
 	"exchange_rate/pkg/infrastructure/mail"
 	"exchange_rate/pkg/repository/file"
@@ -65,8 +64,6 @@ func (app *App) initServices() error {
 	if err != nil {
 		return err
 	}
-
-	repoCurrency.SetCurrencyRate(app.context, *domain.NewCurrencyRate(domain.GetMarketBTCUAH(), float64(1040000.22)))
 
 	currency, err := currency.NewCurrency(app.context, repoCurrency)
 	if err != nil {
