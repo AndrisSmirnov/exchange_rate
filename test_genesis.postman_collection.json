@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "7032347d-047d-4285-b476-337941c3c66e",
+		"name": "test_genesis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26392137"
+	},
+	"item": [
+		{
+			"name": "Get Rate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/rate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/subscribe?email=pavlo.m@medevelop.studio",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subscribe"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "pavlo.m@medevelop.studio"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send emails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/sendEmails",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sendEmails"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
